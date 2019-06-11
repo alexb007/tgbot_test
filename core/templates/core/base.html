@@ -1,0 +1,30 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}CryptoBOT</title>
+    <link rel="stylesheet" href="{% static 'css/semantic.min.css' %}">
+</head>
+<body>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            {% trans 'Crypto BOT' %}
+        </a>
+        <a href="{% url 'core:home' %}" class="item">Home</a>
+        <a href="{% url 'core:crypto-list' %}" class="item">Crypto Currencies</a>
+        <a href="{% url 'core:website-list' %}" class="item">Web sites</a>
+        <a href="{% url 'website-list' %}" class="item">Web sites(API)</a>
+
+    </div>
+</div>
+
+<div class="ui container" style="margin-top: 7em">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+
+</body>
+</html>

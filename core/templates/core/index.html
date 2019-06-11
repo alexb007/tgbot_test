@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% load static i18n humanize %}
+{% block title %}{% trans 'Home' %}{% endblock %}
+
+{% block content %}
+    <div>
+        <a href="{% url 'core:crypto-list' %}">{% trans 'Cryptocurrencies' %}</a>
+        <a href="{% url 'core:website-list' %}">{% trans 'WebSites' %}</a>
+    </div>
+{% endblock content %}
